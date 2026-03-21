@@ -1,5 +1,5 @@
 <footer class="mt-16 border-t border-slate-200 bg-[#01012D] text-white">
-  <div class="mx-auto grid w-full max-w-[1400px] gap-8 px-4 py-10 sm:grid-cols-2 {{ theme_settings.show_newsletter.value|default(true) ? 'xl:grid-cols-4' : 'xl:grid-cols-3' }}">
+  <div class="mx-auto grid w-full max-w-[1400px] gap-8 px-4 py-10 sm:grid-cols-2 {{ theme.settings.get('show_newsletter')|default(true) ? 'xl:grid-cols-4' : 'xl:grid-cols-3' }}">
     <section>
       <h3 class="mb-3 text-lg font-semibold">{{ store.name }}</h3>
       <p class="text-sm text-slate-300">{{ salla.lang.get('footer.about_text') }}</p>
@@ -22,7 +22,7 @@
         <li><a href="/page/terms-and-conditions" class="hover:text-white">{{ salla.lang.get('footer.terms') }}</a></li>
       </ul>
     </section>
-    {% if theme_settings.show_newsletter.value|default(true) %}
+    {% if theme.settings.get('show_newsletter')|default(true) %}
       <section>
         <h3 class="mb-3 text-lg font-semibold">{{ salla.lang.get('footer.newsletter_title') }}</h3>
         <p class="mb-4 text-sm text-slate-300">{{ salla.lang.get('footer.newsletter_description') }}</p>

@@ -1,13 +1,13 @@
 {% extends 'layouts/master.twig' %}
 
 {% block title %}{{ salla.lang.get('nav.about') }} - {{ store.name }}{% endblock %}
-{% block description %}{{ theme_settings.about_description.value|default(salla.lang.get('about.description')) }}{% endblock %}
+{% block description %}{{ theme.settings.get('about_description')|default(salla.lang.get('about.description')) }}{% endblock %}
 
 {% block content %}
   <section class="mx-auto w-full max-w-[1200px] px-4 py-10">
     {%- include 'partials/page-header.twig' with {
-      title: theme_settings.about_title.value|default(salla.lang.get('about.title')),
-      subtitle: theme_settings.about_description.value|default(salla.lang.get('about.description'))
+      title: theme.settings.get('about_title')|default(salla.lang.get('about.title')),
+      subtitle: theme.settings.get('about_description')|default(salla.lang.get('about.description'))
     } -%}
 
     <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

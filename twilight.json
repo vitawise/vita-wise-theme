@@ -1,4 +1,12 @@
 {
+  "version": "1.0.0",
+  "theme_name": "VitaWise Twilight Theme",
+  "repo_url": "https://github.com/vitawise/vita-wise-theme",
+  "support_url": "https://vitawise.sa",
+  "description": {
+    "ar": "قالب متجر صيدلية احترافي يدعم العربية والإنجليزية بالكامل.",
+    "en": "Professional pharmacy store theme with full Arabic and English support."
+  },
   "name": {
     "ar": "فيتاوايز",
     "en": "VitaWise Twilight Theme"
@@ -19,6 +27,7 @@
     "component-products-slider",
     "component-photos-slider",
     "component-parallax-background",
+    "component-random-testimonials",
     "component-testimonials",
     "component-square-photos",
     "component-store-features",
@@ -45,6 +54,12 @@
       "label": "وصف قصير للقالب",
       "format": "text",
       "value": "قالب احترافي لمتاجر الصحة والصيدليات"
+    },
+    {
+      "type": "string",
+      "id": "placeholder",
+      "format": "hidden",
+      "value": "images/img_placeholder.png"
     },
     {
       "type": "string",
@@ -1037,5 +1052,60 @@
       "value": ""
     }
   ],
-  "components": []
+  "components": [
+    {
+      "name": "custom-slider",
+      "title": "صور متحركة (مخصص)",
+      "icon": "sicon-image-carousel",
+      "path": "home.custom-slider",
+      "fields": [
+        {
+          "id": "images",
+          "type": "collection",
+          "format": "collection",
+          "required": true,
+          "minLength": 1,
+          "maxLength": 10,
+          "fields": [
+            {
+              "id": "image",
+              "type": "string",
+              "format": "image"
+            },
+            {
+              "id": "title",
+              "type": "string",
+              "label": "عنوان رئيسي (إختياري)"
+            },
+            {
+              "id": "sub_title",
+              "type": "string",
+              "format": "textarea",
+              "label": "نص توضيحي (إختياري)"
+            },
+            {
+              "id": "link",
+              "type": "string",
+              "label": "رابط الشريحة (إختياري)"
+            }
+          ]
+        },
+        {
+          "id": "auto_play",
+          "type": "boolean",
+          "label": "تشغيل تلقائي",
+          "format": "switch",
+          "selected": true,
+          "value": true
+        },
+        {
+          "id": "speed_seconds",
+          "type": "string",
+          "label": "سرعة التنقل بالثواني",
+          "format": "text",
+          "value": "5"
+        }
+      ]
+    }
+  ]
 }

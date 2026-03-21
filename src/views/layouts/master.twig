@@ -12,7 +12,6 @@
   {% hook 'head:end' %}
 </head>
 <body class="bg-slate-50 text-slate-900" data-lat="{{ store.location.latitude|default('24.7136') }}" data-lng="{{ store.location.longitude|default('46.6753') }}">
-  {% set theme_settings = settings|default(theme.settings|default({})) %}
   {%- include 'components/header.twig' -%}
 
   <main id="main-content">

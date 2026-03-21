@@ -1,4 +1,4 @@
-{% if theme_settings.show_featured_section.value|default(true) %}
+{% if theme.settings.get('show_featured_section')|default(true) %}
   <section class="mx-auto w-full max-w-[1400px] px-4 py-8">
     <div class="mb-4 flex items-center justify-between">
       <h2 class="text-2xl font-bold text-[#01012D]">{{ salla.lang.get('sections.featured_products') }}</h2>

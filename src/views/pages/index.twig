@@ -4,7 +4,7 @@
 {% block description %}{{ salla.lang.get('meta.home_description') }}{% endblock %}
 
 {% block content %}
-  {% set sections_order = theme_settings.home_sections_order.value|default('hero,categories,featured,new_arrivals,best_sellers,recently_viewed,blog')|split(',') %}
+  {% set sections_order = theme.settings.get('home_sections_order')|default('hero,categories,featured,new_arrivals,best_sellers,recently_viewed,blog')|split(',') %}
   {% for section in sections_order %}
     {% set key = section|trim %}
     {% if key == 'hero' %}

@@ -1,0 +1,25 @@
+{% set slider_images = component.images|default([]) %}
+{% if slider_images|length > 0 %}
+  <section class="mx-auto w-full max-w-[1400px] px-4 py-8">
+    <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white">
+      <div class="grid gap-0 md:grid-cols-2 lg:grid-cols-3">
+        {% for slide in slider_images %}
+          <a href="{{ slide.link|default('#') }}" class="group relative block overflow-hidden">
+            {% if slide.image %}
+              <img src="{{ slide.image }}" alt="{{ slide.title|default(store.name) }}" class="h-56 w-full object-cover transition duration-300 group-hover:scale-105" loading="lazy" />
+            {% endif %}
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 p-4 text-white">
+              {% if slide.title %}
+                <h3 class="text-base font-semibold">{{ slide.title }}</h3>
+              {% endif %}
+              {% if slide.sub_title %}
+                <p class="mt-1 text-sm text-slate-100">{{ slide.sub_title }}</p>
+              {% endif %}
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endif %}

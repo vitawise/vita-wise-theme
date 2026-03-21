@@ -13,7 +13,7 @@
           <p class="mb-2 text-sm md:text-base">{{ salla.lang.get('hero.badge') }}</p>
           <h1 class="mb-3 text-3xl font-bold md:text-5xl">{{ salla.lang.get('hero.title') }}</h1>
           <p class="mb-5 text-sm md:text-base">{{ salla.lang.get('hero.subtitle') }}</p>
-          <a href="{{ theme_settings.hero_cta_link.value|default('/products') }}" class="inline-flex rounded-full bg-[#C93A2E] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#B63126]">
+          <a href="{{ theme.settings.get('hero_cta_link')|default('/products') }}" class="inline-flex rounded-full bg-[#C93A2E] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#B63126]">
             {{ salla.lang.get('hero.cta') }}
           </a>
         </div>
