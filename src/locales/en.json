@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "home_description": "VitaWise Pharmacy online store for health, wellness, and daily essentials.",
+    "category_description": "Browse products by category.",
+    "product_description": "Product details and purchasing options."
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "categories": "Categories",
+    "blog": "Blog",
+    "about": "About",
+    "cart": "Cart",
+    "wishlist": "Wishlist",
+    "orders": "Orders",
+    "menu": "Menu"
+  },
+  "header": {
+    "weather_bar": "Today | Hijri calendar | Prayer times",
+    "shipping_note": "Free shipping for qualifying orders across Saudi Arabia",
+    "language": "AR / EN",
+    "maintenance": "Store is currently in maintenance mode. Some features may be unavailable."
+  },
+  "banner": {
+    "offer_1": "Weekend offers up to 30%",
+    "offer_2": "Fast delivery all over KSA",
+    "offer_3": "Trusted pharmacy products"
+  },
+  "hero": {
+    "badge": "Your health partner",
+    "title": "Wellness essentials with trusted quality",
+    "subtitle": "Discover curated healthcare products, supplements, and pharmacy picks.",
+    "cta": "Shop now"
+  },
+  "sections": {
+    "categories": "Shop by category",
+    "featured_products": "Featured products",
+    "new_arrivals": "New arrivals",
+    "best_sellers": "Best sellers",
+    "recently_viewed": "Recently viewed",
+    "recently_viewed_empty": "No recently viewed items yet.",
+    "blog": "From our blog",
+    "blog_empty": "No blog posts yet.",
+    "default_category_1": "Supplements",
+    "default_category_2": "Personal care",
+    "default_category_3": "Medical devices",
+    "default_category_4": "Skincare"
+  },
+  "badges": {
+    "new": "New"
+  },
+  "common": {
+    "view_all": "View all",
+    "search_products": "Search products",
+    "filter": "Filter",
+    "sort": "Sort",
+    "sort_name_asc": "Name A to Z",
+    "sort_name_desc": "Name Z to A",
+    "all": "All",
+    "add_to_cart": "Add to cart",
+    "reviews": "reviews",
+    "save_changes": "Save changes",
+    "no_products": "No products available right now.",
+    "read_more": "Read more"
+  },
+  "pages": {
+    "category": "Category",
+    "category_subtitle": "Find what suits your health needs.",
+    "product": "Product",
+    "cart": "Cart",
+    "checkout": "Checkout",
+    "profile": "Profile",
+    "wishlist": "Wishlist",
+    "orders": "Orders",
+    "blog": "Blog",
+    "compare": "Compare"
+  },
+  "blog": {
+    "description": "Latest updates, health tips, and pharmacy insights.",
+    "empty": "No blog articles available yet."
+  },
+  "compare": {
+    "title": "Compare products",
+    "description": "Review products side by side to pick what fits you best.",
+    "feature": "Feature",
+    "no_products": "No products selected for comparison",
+    "price": "Price",
+    "rating": "Rating",
+    "stock": "Stock"
+  },
+  "about": {
+    "title": "About VitaWise",
+    "description": "We deliver trusted healthcare products with modern service standards and transparent pricing.",
+    "feature_1_title": "Care First",
+    "feature_1_text": "Your wellness is at the center of every product and recommendation.",
+    "feature_2_title": "Verified Quality",
+    "feature_2_text": "Products are sourced through trusted channels and monitored for quality.",
+    "feature_3_title": "Fast Delivery",
+    "feature_3_text": "Nationwide shipping with reliable timelines and order tracking.",
+    "feature_4_title": "Always Available",
+    "feature_4_text": "A dependable online experience when you need pharmacy essentials."
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Create account",
+    "email": "Email",
+    "password": "Password",
+    "full_name": "Full name",
+    "continue": "Continue",
+    "no_account": "Don’t have an account?",
+    "create_account": "Sign up",
+    "have_account": "Already have an account?"
+  },
+  "cart": {
+    "summary": "Order summary",
+    "subtotal": "Subtotal",
+    "vat": "VAT",
+    "shipping": "Shipping",
+    "total": "Total",
+    "proceed_checkout": "Proceed to checkout",
+    "free_shipping_hint": "Free shipping applies once your order reaches the configured threshold."
+  },
+  "product": {
+    "quantity": "Quantity",
+    "out_of_stock": "Out of stock",
+    "in_stock": "In stock",
+    "related": "You may also like"
+  },
+  "checkout": {
+    "customer_info": "Customer information",
+    "name": "Full name",
+    "email": "Email address",
+    "phone": "Phone number",
+    "shipping_address": "Shipping address",
+    "street": "Street address",
+    "city": "City",
+    "postal_code": "Postal code",
+    "country": "Country",
+    "payment_method": "Payment method",
+    "cod": "Cash on delivery",
+    "card": "Credit card",
+    "stc": "STC Pay",
+    "bank": "Bank transfer",
+    "card_details": "Card details",
+    "card_name": "Name on card",
+    "card_number": "Card number",
+    "card_expiry": "Expiry (MM/YY)",
+    "card_cvv": "CVV",
+    "discount_code": "Discount code",
+    "discount_placeholder": "Enter discount code",
+    "apply": "Apply",
+    "notes": "Order notes",
+    "notes_placeholder": "Add any notes for delivery or order handling",
+    "place_order": "Place order"
+  },
+  "profile": {
+    "guest": "Customer",
+    "full_name": "Full name",
+    "phone": "Phone",
+    "address": "Default address"
+  },
+  "orders": {
+    "number": "Order #",
+    "date": "Date",
+    "status": "Status",
+    "total": "Total",
+    "pending": "Pending",
+    "empty": "No orders yet"
+  },
+  "wishlist": {
+    "empty": "Your wishlist is empty."
+  },
+  "footer": {
+    "about_text": "VitaWise provides reliable pharmacy products with transparent pricing and fast delivery.",
+    "quick_links": "Quick links",
+    "support": "Support",
+    "contact_us": "Contact us",
+    "privacy": "Privacy policy",
+    "terms": "Terms & conditions",
+    "newsletter_title": "Newsletter",
+    "newsletter_description": "Get updates on offers and new products.",
+    "email_placeholder": "Enter your email",
+    "subscribe": "Subscribe",
+    "rights": "All rights reserved."
+  }
+}

@@ -1,0 +1,12 @@
+{% if theme_settings.show_news_banner.value|default(true) %}
+  <div class="overflow-hidden bg-[#C93A2E] text-white">
+    <div class="news-marquee-track flex h-10 items-center gap-10 px-4 text-sm font-medium">
+      <span>🔥 {{ salla.lang.get('banner.offer_1') }}</span>
+      <span>🚚 {{ salla.lang.get('banner.offer_2') }}</span>
+      <span>💊 {{ salla.lang.get('banner.offer_3') }}</span>
+      <span>🔥 {{ salla.lang.get('banner.offer_1') }}</span>
+      <span>🚚 {{ salla.lang.get('banner.offer_2') }}</span>
+      <span>💊 {{ salla.lang.get('banner.offer_3') }}</span>
+    </div>
+  </div>
+{% endif %}

@@ -1,0 +1,16 @@
+<section class="mx-auto w-full max-w-[1400px] px-4 py-8">
+  <div class="mb-4 flex items-center justify-between">
+    <h2 class="text-2xl font-bold text-[#01012D]">{{ salla.lang.get('sections.categories') }}</h2>
+    <a href="/categories" class="text-sm font-semibold text-sky-700 hover:text-sky-900">{{ salla.lang.get('common.view_all') }}</a>
+  </div>
+  <div class="flex gap-3 overflow-x-auto pb-2">
+    {% for item in categories|default([]) %}
+      <a href="{{ item.url }}" class="category-pill whitespace-nowrap">{{ item.name }}</a>
+    {% else %}
+      <a href="/categories" class="category-pill">{{ salla.lang.get('sections.default_category_1') }}</a>
+      <a href="/categories" class="category-pill">{{ salla.lang.get('sections.default_category_2') }}</a>
+      <a href="/categories" class="category-pill">{{ salla.lang.get('sections.default_category_3') }}</a>
+      <a href="/categories" class="category-pill">{{ salla.lang.get('sections.default_category_4') }}</a>
+    {% endfor %}
+  </div>
+</section>

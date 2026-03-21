@@ -1,0 +1,26 @@
+{% extends 'layouts/master.twig' %}
+
+{% block title %}{{ store.name }}{% endblock %}
+{% block description %}{{ salla.lang.get('meta.home_description') }}{% endblock %}
+
+{% block content %}
+  {% set sections_order = theme_settings.home_sections_order.value|default('hero,categories,featured,new_arrivals,best_sellers,recently_viewed,blog')|split(',') %}
+  {% for section in sections_order %}
+    {% set key = section|trim %}
+    {% if key == 'hero' %}
+      {%- include 'components/hero-banner.twig' -%}
+    {% elseif key == 'categories' %}
+      {%- include 'components/category-strip.twig' -%}
+    {% elseif key == 'featured' %}
+      {%- include 'components/home-section-featured.twig' -%}
+    {% elseif key == 'new_arrivals' %}
+      {%- include 'components/home-section-new-arrivals.twig' -%}
+    {% elseif key == 'best_sellers' %}
+      {%- include 'components/home-section-best-sellers.twig' -%}
+    {% elseif key == 'recently_viewed' %}
+      {%- include 'components/home-section-recently-viewed.twig' -%}
+    {% elseif key == 'blog' %}
+      {%- include 'components/home-section-blog.twig' -%}
+    {% endif %}
+  {% endfor %}
+{% endblock %}

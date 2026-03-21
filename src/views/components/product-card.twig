@@ -1,0 +1,15 @@
+<article class="product-card overflow-hidden">
+  <salla-product-card product-id="{{ product.id }}"></salla-product-card>
+  <div class="space-y-3 border-t border-slate-100 p-4">
+    <div class="flex items-center gap-2 text-sm">
+      <salla-rating value="{{ product.rating|default(4.5) }}"></salla-rating>
+      <span class="text-slate-500">({{ product.rating_count|default(0) }})</span>
+    </div>
+    <div class="flex gap-2">
+      <button class="flex-1 rounded-lg bg-sky-600 px-3 py-2 text-sm font-semibold text-white hover:bg-sky-700" data-add-to-cart data-product-id="{{ product.id }}">
+        {{ salla.lang.get('common.add_to_cart') }}
+      </button>
+      <salla-wishlist-button product-id="{{ product.id }}"></salla-wishlist-button>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,49 @@
+<div class="mx-auto flex w-full max-w-[1400px] items-center gap-3 px-4 py-4">
+  <a href="/" class="flex items-center gap-3">
+    {% if store.logo %}
+      <img src="{{ store.logo }}" alt="{{ store.name }}" class="h-10 w-auto" loading="lazy" />
+    {% else %}
+      <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-primary font-bold text-white">V</span>
+    {% endif %}
+    <span class="text-lg font-bold text-[#01012D]">{{ store.name }}</span>
+  </a>
+
+  <nav class="ms-auto hidden items-center gap-6 text-sm font-medium md:flex">
+    <a href="/" class="hover:text-sky-600">{{ salla.lang.get('nav.home') }}</a>
+    <a href="/categories" class="hover:text-sky-600">{{ salla.lang.get('nav.categories') }}</a>
+    <a href="/products" class="hover:text-sky-600">{{ salla.lang.get('nav.products') }}</a>
+    <a href="/blog" class="hover:text-sky-600">{{ salla.lang.get('nav.blog') }}</a>
+    <a href="/about" class="hover:text-sky-600">{{ salla.lang.get('nav.about') }}</a>
+    <a href="/orders" class="hover:text-sky-600">{{ salla.lang.get('nav.orders') }}</a>
+  </nav>
+
+  <div class="ms-auto flex items-center gap-2 md:ms-0">
+    <button type="button" data-language-toggle class="rounded-full border border-slate-300 px-3 py-1 text-xs font-semibold hover:border-sky-600 hover:text-sky-600">
+      {{ salla.lang.get('header.language') }}
+    </button>
+    <a href="/wishlist" class="rounded-full border border-slate-300 px-3 py-1 text-xs font-semibold hover:border-sky-600 hover:text-sky-600">
+      {{ salla.lang.get('nav.wishlist') }}
+    </a>
+    <a href="/cart" class="rounded-full bg-sky-600 px-3 py-1 text-xs font-semibold text-white hover:bg-sky-700">
+      {{ salla.lang.get('nav.cart') }}
+    </a>
+    <button type="button" data-open-login class="hidden rounded-full border border-slate-300 px-3 py-1 text-xs font-semibold hover:border-sky-600 hover:text-sky-600 md:inline-flex">
+      {{ salla.lang.get('auth.login') }}
+    </button>
+    <button type="button" data-mobile-menu-toggle class="inline-flex h-8 w-8 items-center justify-center rounded-md border border-slate-300 md:hidden" aria-label="{{ salla.lang.get('nav.menu') }}">
+      ☰
+    </button>
+  </div>
+</div>
+
+<div data-mobile-menu class="hidden border-t border-slate-100 px-4 pb-4 md:hidden">
+  <nav class="flex flex-col gap-2 pt-3 text-sm font-medium">
+    <a href="/" class="rounded-md px-2 py-2 hover:bg-slate-100">{{ salla.lang.get('nav.home') }}</a>
+    <a href="/categories" class="rounded-md px-2 py-2 hover:bg-slate-100">{{ salla.lang.get('nav.categories') }}</a>
+    <a href="/products" class="rounded-md px-2 py-2 hover:bg-slate-100">{{ salla.lang.get('nav.products') }}</a>
+    <a href="/blog" class="rounded-md px-2 py-2 hover:bg-slate-100">{{ salla.lang.get('nav.blog') }}</a>
+    <a href="/about" class="rounded-md px-2 py-2 hover:bg-slate-100">{{ salla.lang.get('nav.about') }}</a>
+    <a href="/orders" class="rounded-md px-2 py-2 hover:bg-slate-100">{{ salla.lang.get('nav.orders') }}</a>
+    <button type="button" data-open-login class="rounded-md border border-slate-300 px-2 py-2 text-start">{{ salla.lang.get('auth.login') }}</button>
+  </nav>
+</div>

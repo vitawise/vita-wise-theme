@@ -1,0 +1,98 @@
+{
+  "theme_name": {
+    "type": "text",
+    "label": {
+      "en": "Theme name",
+      "ar": "اسم القالب"
+    },
+    "value": "VitaWise Twilight"
+  },
+  "show_news_banner": {
+    "type": "boolean",
+    "label": {
+      "en": "Show news banner",
+      "ar": "إظهار شريط الأخبار"
+    },
+    "value": true
+  },
+  "hero_cta_link": {
+    "type": "text",
+    "label": {
+      "en": "Hero CTA link",
+      "ar": "رابط زر البانر الرئيسي"
+    },
+    "value": "/products"
+  },
+  "show_newsletter": {
+    "type": "boolean",
+    "label": {
+      "en": "Show newsletter section",
+      "ar": "إظهار قسم النشرة البريدية"
+    },
+    "value": true
+  },
+  "show_featured_section": {
+    "type": "boolean",
+    "label": {
+      "en": "Show featured products section",
+      "ar": "إظهار قسم المنتجات المميزة"
+    },
+    "value": true
+  },
+  "show_new_arrivals_section": {
+    "type": "boolean",
+    "label": {
+      "en": "Show new arrivals section",
+      "ar": "إظهار قسم وصل حديثاً"
+    },
+    "value": true
+  },
+  "show_best_sellers_section": {
+    "type": "boolean",
+    "label": {
+      "en": "Show best sellers section",
+      "ar": "إظهار قسم الأكثر مبيعاً"
+    },
+    "value": true
+  },
+  "show_recently_viewed_section": {
+    "type": "boolean",
+    "label": {
+      "en": "Show recently viewed section",
+      "ar": "إظهار قسم شوهد مؤخراً"
+    },
+    "value": true
+  },
+  "show_blog_section": {
+    "type": "boolean",
+    "label": {
+      "en": "Show blog section",
+      "ar": "إظهار قسم المدونة"
+    },
+    "value": true
+  },
+  "home_sections_order": {
+    "type": "text",
+    "label": {
+      "en": "Home sections order (comma separated)",
+      "ar": "ترتيب أقسام الرئيسية (مفصولة بفواصل)"
+    },
+    "value": "hero,categories,featured,new_arrivals,best_sellers,recently_viewed,blog"
+  },
+  "about_title": {
+    "type": "text",
+    "label": {
+      "en": "About page title",
+      "ar": "عنوان صفحة من نحن"
+    },
+    "value": "About VitaWise"
+  },
+  "about_description": {
+    "type": "textarea",
+    "label": {
+      "en": "About page description",
+      "ar": "وصف صفحة من نحن"
+    },
+    "value": "VitaWise is a trusted online pharmacy experience focused on quality products and customer care."
+  }
+}

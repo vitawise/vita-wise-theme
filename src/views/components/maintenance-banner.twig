@@ -1,0 +1,5 @@
+{% if store.is_in_maintenance|default(false) %}
+  <div class="border-y border-amber-300 bg-amber-100 py-2 text-center text-xs font-medium text-amber-900">
+    {{ salla.lang.get('header.maintenance') }}
+  </div>
+{% endif %}

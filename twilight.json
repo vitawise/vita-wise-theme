@@ -1,0 +1,14 @@
+{
+  "name": "VitaWise Twilight Theme",
+  "version": "1.0.0",
+  "author": "VitaWise",
+  "support": {
+    "email": "support@vitawise.sa",
+    "url": "https://vitawise.sa"
+  },
+  "settings": "src/config/settings.json",
+  "entry": {
+    "css": "src/assets/css/app.css",
+    "js": "src/assets/js/app.js"
+  }
+}

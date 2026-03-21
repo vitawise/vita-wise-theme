@@ -1,0 +1,41 @@
+<footer class="mt-16 border-t border-slate-200 bg-[#01012D] text-white">
+  <div class="mx-auto grid w-full max-w-[1400px] gap-8 px-4 py-10 sm:grid-cols-2 {{ theme_settings.show_newsletter.value|default(true) ? 'xl:grid-cols-4' : 'xl:grid-cols-3' }}">
+    <section>
+      <h3 class="mb-3 text-lg font-semibold">{{ store.name }}</h3>
+      <p class="text-sm text-slate-300">{{ salla.lang.get('footer.about_text') }}</p>
+    </section>
+    <section>
+      <h3 class="mb-3 text-lg font-semibold">{{ salla.lang.get('footer.quick_links') }}</h3>
+      <ul class="space-y-2 text-sm text-slate-300">
+        <li><a href="/products" class="hover:text-white">{{ salla.lang.get('nav.products') }}</a></li>
+        <li><a href="/categories" class="hover:text-white">{{ salla.lang.get('nav.categories') }}</a></li>
+        <li><a href="/blog" class="hover:text-white">{{ salla.lang.get('nav.blog') }}</a></li>
+        <li><a href="/wishlist" class="hover:text-white">{{ salla.lang.get('nav.wishlist') }}</a></li>
+        <li><a href="/about" class="hover:text-white">{{ salla.lang.get('nav.about') }}</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3 class="mb-3 text-lg font-semibold">{{ salla.lang.get('footer.support') }}</h3>
+      <ul class="space-y-2 text-sm text-slate-300">
+        <li><a href="/page/contact-us" class="hover:text-white">{{ salla.lang.get('footer.contact_us') }}</a></li>
+        <li><a href="/page/privacy-policy" class="hover:text-white">{{ salla.lang.get('footer.privacy') }}</a></li>
+        <li><a href="/page/terms-and-conditions" class="hover:text-white">{{ salla.lang.get('footer.terms') }}</a></li>
+      </ul>
+    </section>
+    {% if theme_settings.show_newsletter.value|default(true) %}
+      <section>
+        <h3 class="mb-3 text-lg font-semibold">{{ salla.lang.get('footer.newsletter_title') }}</h3>
+        <p class="mb-4 text-sm text-slate-300">{{ salla.lang.get('footer.newsletter_description') }}</p>
+        <form class="flex gap-2">
+          <input type="email" class="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm placeholder:text-slate-500" placeholder="{{ salla.lang.get('footer.email_placeholder') }}">
+          <button type="submit" class="rounded-lg bg-sky-600 px-4 py-2 text-sm font-semibold hover:bg-sky-700">
+            {{ salla.lang.get('footer.subscribe') }}
+          </button>
+        </form>
+      </section>
+    {% endif %}
+  </div>
+  <div class="border-t border-slate-800 py-4 text-center text-xs text-slate-400">
+    © {{ "now"|date("Y") }} {{ store.name }}. {{ salla.lang.get('footer.rights') }}
+  </div>
+</footer>

@@ -1,0 +1,16 @@
+{% extends 'layouts/master.twig' %}
+
+{% block title %}{{ salla.lang.get('pages.wishlist') }} - {{ store.name }}{% endblock %}
+
+{% block content %}
+  <section class="mx-auto w-full max-w-[1400px] px-4 py-8">
+    <h1 class="mb-6 text-3xl font-bold text-[#01012D]">{{ salla.lang.get('pages.wishlist') }}</h1>
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {% for item in wishlist_products|default([]) %}
+        {%- include 'components/product-card.twig' with { product: item } -%}
+      {% else %}
+        <p class="text-sm text-slate-500">{{ salla.lang.get('wishlist.empty') }}</p>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}

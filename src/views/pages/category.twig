@@ -1,0 +1,44 @@
+{% extends 'layouts/master.twig' %}
+
+{% block title %}{{ category.name|default(salla.lang.get('pages.category')) }} - {{ store.name }}{% endblock %}
+{% block description %}{{ category.description|default(salla.lang.get('meta.category_description')) }}{% endblock %}
+
+{% block content %}
+  <section class="mx-auto w-full max-w-[1400px] px-4 py-8">
+    {%- include 'partials/page-header.twig' with {
+      title: category.name|default(salla.lang.get('pages.category')),
+      subtitle: category.description|default(salla.lang.get('pages.category_subtitle'))
+    } -%}
+
+    <div class="mb-3 flex flex-wrap items-center gap-3">
+      <input type="search" data-category-search class="min-w-[240px] flex-1 rounded-lg border border-slate-300 px-4 py-2" placeholder="{{ salla.lang.get('common.search_products') }}" />
+      <select data-category-sort class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold">
+        <option value="default">{{ salla.lang.get('common.sort') }}</option>
+        <option value="name-asc">{{ salla.lang.get('common.sort_name_asc') }}</option>
+        <option value="name-desc">{{ salla.lang.get('common.sort_name_desc') }}</option>
+      </select>
+      <button class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold">{{ salla.lang.get('common.filter') }}</button>
+    </div>
+
+    <div class="mb-6 flex flex-wrap gap-2">
+      <button type="button" data-category-pill data-category-value="all" class="rounded-full bg-sky-600 px-3 py-1 text-xs font-semibold text-white">
+        {{ salla.lang.get('common.all') }}
+      </button>
+      {% for cat in categories|default([]) %}
+        <button type="button" data-category-pill data-category-value="{{ cat.id|default(cat.slug|default('')) }}" class="rounded-full border border-slate-300 px-3 py-1 text-xs font-semibold text-slate-700 hover:border-sky-500 hover:text-sky-700">
+          {{ cat.name }}
+        </button>
+      {% endfor %}
+    </div>
+
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" data-category-grid>
+      {% for item in products|default(category.products|default([])) %}
+        <div data-product-item data-product-name="{{ item.name|default('')|lower }}" data-product-category="{{ item.category.id|default(item.category_id|default('')) }}">
+          {%- include 'components/product-card.twig' with { product: item } -%}
+        </div>
+      {% else %}
+        <p class="text-sm text-slate-500">{{ salla.lang.get('common.no_products') }}</p>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,2 @@
+/*! For license information please see 845.js.LICENSE.txt */
+(self.webpackChunkvitawise_twilight_theme=self.webpackChunkvitawise_twilight_theme||[]).push([[845],{3225(){},8845(e,t,i){"use strict";i.r(t);var s=i(3225),h={};for(const e in s)"default"!==e&&(h[e]=()=>s[e]);i.d(t,h)}}]);

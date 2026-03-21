@@ -1,0 +1,30 @@
+{% extends 'layouts/master.twig' %}
+
+{% block title %}{{ salla.lang.get('nav.blog') }} - {{ store.name }}{% endblock %}
+{% block description %}{{ salla.lang.get('blog.description') }}{% endblock %}
+
+{% block content %}
+  <section class="mx-auto w-full max-w-[1400px] px-4 py-8">
+    {%- include 'partials/page-header.twig' with {
+      title: salla.lang.get('nav.blog'),
+      subtitle: salla.lang.get('blog.description')
+    } -%}
+
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {% for post in blog_posts|default([]) %}
+        <article class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-soft">
+          {% if post.image %}
+            <img src="{{ post.image }}" alt="{{ post.title }}" class="aspect-[16/10] w-full object-cover" loading="lazy" />
+          {% endif %}
+          <div class="space-y-3 p-4">
+            <h2 class="line-clamp-2 text-lg font-semibold text-[#01012D]">{{ post.title }}</h2>
+            <p class="line-clamp-3 text-sm text-slate-600">{{ post.excerpt|default('') }}</p>
+            <a href="{{ post.url|default('/blog') }}" class="text-sm font-semibold text-sky-700 hover:text-sky-900">{{ salla.lang.get('common.read_more') }}</a>
+          </div>
+        </article>
+      {% else %}
+        <p class="text-sm text-slate-500">{{ salla.lang.get('blog.empty') }}</p>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% if theme_settings.show_recently_viewed_section.value|default(true) %}
+  <section class="mx-auto w-full max-w-[1400px] px-4 py-8">
+    <div class="mb-4 flex items-center justify-between">
+      <h2 class="text-2xl font-bold text-[#01012D]">{{ salla.lang.get('sections.recently_viewed') }}</h2>
+      <a href="/products" class="text-sm font-semibold text-sky-700 hover:text-sky-900">{{ salla.lang.get('common.view_all') }}</a>
+    </div>
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {% for product in recently_viewed|default([])|slice(0, 8) %}
+        {%- include 'components/product-card.twig' with { product: product } -%}
+      {% else %}
+        <p class="text-sm text-slate-500">{{ salla.lang.get('sections.recently_viewed_empty') }}</p>
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}

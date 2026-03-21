@@ -1,0 +1,56 @@
+{% extends 'layouts/master.twig' %}
+
+{% block title %}{{ salla.lang.get('compare.title') }} - {{ store.name }}{% endblock %}
+{% block description %}{{ salla.lang.get('compare.description') }}{% endblock %}
+
+{% block content %}
+  <section class="mx-auto w-full max-w-[1400px] px-4 py-8">
+    {%- include 'partials/page-header.twig' with {
+      title: salla.lang.get('compare.title'),
+      subtitle: salla.lang.get('compare.description')
+    } -%}
+
+    <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white">
+      <table class="min-w-full text-sm">
+        <thead class="bg-slate-50 text-slate-600">
+          <tr>
+            <th class="px-4 py-3 text-start">{{ salla.lang.get('compare.feature') }}</th>
+            {% for product in compare_products|default([])|slice(0, 4) %}
+              <th class="px-4 py-3 text-start">{{ product.name }}</th>
+            {% else %}
+              <th class="px-4 py-3 text-start">{{ salla.lang.get('compare.no_products') }}</th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-t border-slate-100">
+            <td class="px-4 py-3 font-semibold">{{ salla.lang.get('compare.price') }}</td>
+            {% for product in compare_products|default([])|slice(0, 4) %}
+              <td class="px-4 py-3">{{ product.price|money }}</td>
+            {% else %}
+              <td class="px-4 py-3 text-slate-500">—</td>
+            {% endfor %}
+          </tr>
+          <tr class="border-t border-slate-100">
+            <td class="px-4 py-3 font-semibold">{{ salla.lang.get('compare.rating') }}</td>
+            {% for product in compare_products|default([])|slice(0, 4) %}
+              <td class="px-4 py-3">{{ product.rating|default('—') }}</td>
+            {% else %}
+              <td class="px-4 py-3 text-slate-500">—</td>
+            {% endfor %}
+          </tr>
+          <tr class="border-t border-slate-100">
+            <td class="px-4 py-3 font-semibold">{{ salla.lang.get('compare.stock') }}</td>
+            {% for product in compare_products|default([])|slice(0, 4) %}
+              <td class="px-4 py-3">
+                {{ (product.quantity|default(0) > 0) ? salla.lang.get('product.in_stock') : salla.lang.get('product.out_of_stock') }}
+              </td>
+            {% else %}
+              <td class="px-4 py-3 text-slate-500">—</td>
+            {% endfor %}
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+{% endblock %}

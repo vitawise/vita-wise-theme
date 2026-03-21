@@ -1,0 +1,26 @@
+{% extends 'layouts/master.twig' %}
+
+{% block title %}{{ salla.lang.get('pages.profile') }} - {{ store.name }}{% endblock %}
+
+{% block content %}
+  <section class="mx-auto w-full max-w-[900px] px-4 py-8">
+    <h1 class="mb-6 text-3xl font-bold text-[#01012D]">{{ salla.lang.get('pages.profile') }}</h1>
+    <div class="rounded-2xl border border-slate-200 bg-white p-6">
+      <div class="mb-6 flex items-center gap-4">
+        <img src="{{ customer.avatar|default('https://placehold.co/80x80') }}" alt="{{ customer.name|default('Customer') }}" class="h-16 w-16 rounded-full object-cover">
+        <div>
+          <p class="text-lg font-semibold">{{ customer.name|default(salla.lang.get('profile.guest')) }}</p>
+          <p class="text-sm text-slate-500">{{ customer.email|default('') }}</p>
+        </div>
+      </div>
+      <form class="grid gap-3 sm:grid-cols-2">
+        <input class="rounded-lg border border-slate-300 px-3 py-2" placeholder="{{ salla.lang.get('profile.full_name') }}" value="{{ customer.name|default('') }}">
+        <input class="rounded-lg border border-slate-300 px-3 py-2" placeholder="{{ salla.lang.get('profile.phone') }}" value="{{ customer.mobile|default('') }}">
+        <textarea class="rounded-lg border border-slate-300 px-3 py-2 sm:col-span-2" rows="4" placeholder="{{ salla.lang.get('profile.address') }}">{{ customer.address|default('') }}</textarea>
+        <button type="submit" class="sm:col-span-2 rounded-lg bg-sky-600 px-4 py-3 font-semibold text-white hover:bg-sky-700">
+          {{ salla.lang.get('common.save_changes') }}
+        </button>
+      </form>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,28 @@
+{
+  "name": "vitawise-twilight-theme",
+  "version": "1.0.0",
+  "private": true,
+  "description": "VitaWise e-commerce theme built for Salla Twilight",
+  "scripts": {
+    "dev": "salla theme preview",
+    "preview": "salla theme preview",
+    "build": "webpack --mode=production",
+    "watch": "webpack --mode=development --watch"
+  },
+  "dependencies": {
+    "@salla.sa/twilight": "latest",
+    "@salla.sa/twilight-components": "latest"
+  },
+  "devDependencies": {
+    "@salla.sa/twilight-tailwind-theme": "latest",
+    "@tailwindcss/postcss": "^4.2.2",
+    "autoprefixer": "latest",
+    "css-loader": "latest",
+    "mini-css-extract-plugin": "latest",
+    "postcss": "latest",
+    "postcss-loader": "latest",
+    "tailwindcss": "latest",
+    "webpack": "latest",
+    "webpack-cli": "latest"
+  }
+}

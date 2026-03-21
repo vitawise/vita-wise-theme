@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="{{ app.locale|default('ar') }}" dir="{{ app.direction|default('rtl') }}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}{{ store.name }}{% endblock %}</title>
+  <meta name="description" content="{% block description %}{{ store.description|default(store.name) }}{% endblock %}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ 'dist/assets/css/app.css' | asset }}">
+  {% hook 'head:end' %}
+</head>
+<body class="bg-slate-50 text-slate-900" data-lat="{{ store.location.latitude|default('24.7136') }}" data-lng="{{ store.location.longitude|default('46.6753') }}">
+  {% set theme_settings = settings|default(theme.settings|default({})) %}
+  {%- include 'components/header.twig' -%}
+
+  <main id="main-content">
+    {% block content %}{% endblock %}
+  </main>
+
+  {%- include 'components/footer.twig' -%}
+  <salla-login-modal></salla-login-modal>
+  <script defer src="{{ 'dist/assets/js/app.js' | asset }}"></script>
+  {% hook 'body:end' %}
+</body>
+</html>

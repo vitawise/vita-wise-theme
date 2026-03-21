@@ -1,0 +1,23 @@
+<section class="bg-gradient-hero">
+  <div class="mx-auto w-full max-w-[1400px] px-4 py-6">
+    <div class="relative overflow-hidden rounded-2xl">
+      <img
+        src="{{ store.cover|default('https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&w=1600&q=80') }}"
+        alt="{{ salla.lang.get('hero.title') }}"
+        class="h-[280px] w-full object-cover md:h-[420px]"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-[#01012D]/80 via-[#01012D]/30 to-transparent"></div>
+      <div class="absolute inset-0 flex items-center">
+        <div class="max-w-xl px-6 text-white md:px-10">
+          <p class="mb-2 text-sm md:text-base">{{ salla.lang.get('hero.badge') }}</p>
+          <h1 class="mb-3 text-3xl font-bold md:text-5xl">{{ salla.lang.get('hero.title') }}</h1>
+          <p class="mb-5 text-sm md:text-base">{{ salla.lang.get('hero.subtitle') }}</p>
+          <a href="{{ theme_settings.hero_cta_link.value|default('/products') }}" class="inline-flex rounded-full bg-[#C93A2E] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#B63126]">
+            {{ salla.lang.get('hero.cta') }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

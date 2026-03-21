@@ -1,0 +1,23 @@
+{% extends 'layouts/master.twig' %}
+
+{% block title %}{{ salla.lang.get('auth.register') }} - {{ store.name }}{% endblock %}
+
+{% block content %}
+  <section class="mx-auto flex w-full max-w-[1400px] justify-center px-4 py-12">
+    <div class="w-full max-w-md rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+      <h1 class="mb-4 text-2xl font-bold text-[#01012D]">{{ salla.lang.get('auth.register') }}</h1>
+      <form class="space-y-3">
+        <input type="text" class="w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="{{ salla.lang.get('auth.full_name') }}">
+        <input type="email" required class="w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="{{ salla.lang.get('auth.email') }}">
+        <input type="password" required class="w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="{{ salla.lang.get('auth.password') }}">
+        <button type="submit" class="w-full rounded-lg bg-sky-600 px-4 py-3 font-semibold text-white hover:bg-sky-700">
+          {{ salla.lang.get('auth.register') }}
+        </button>
+      </form>
+      <p class="mt-4 text-sm text-slate-600">
+        {{ salla.lang.get('auth.have_account') }}
+        <a href="/login" class="font-semibold text-sky-700 hover:text-sky-900">{{ salla.lang.get('auth.login') }}</a>
+      </p>
+    </div>
+  </section>
+{% endblock %}
