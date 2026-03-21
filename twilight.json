@@ -6,19 +6,1035 @@
   "repository": "https://github.com/vitawise/vita-wise-theme",
   "author_email": "support@vitawise.sa",
   "features": [
+    "fonts",
+    "color",
+    "breadcrumb",
+    "unite-cards-height",
+    "menu-images",
+    "mega-menu",
     "filters",
     "component-featured-products",
-    "component-products-slider"
+    "component-fixed-banner",
+    "component-fixed-products",
+    "component-products-slider",
+    "component-photos-slider",
+    "component-parallax-background",
+    "component-testimonials",
+    "component-square-photos",
+    "component-store-features",
+    "component-youtube"
   ],
   "settings": [
+    {
+      "type": "static",
+      "id": "section-general-title",
+      "format": "title",
+      "value": "الإعدادات العامة",
+      "variant": "h6"
+    },
+    {
+      "type": "string",
+      "id": "theme_name",
+      "label": "اسم القالب",
+      "format": "text",
+      "value": "VitaWise Twilight"
+    },
+    {
+      "type": "string",
+      "id": "theme_tagline",
+      "label": "وصف قصير للقالب",
+      "format": "text",
+      "value": "قالب احترافي لمتاجر الصحة والصيدليات"
+    },
+    {
+      "type": "string",
+      "id": "store_support_email",
+      "label": "بريد الدعم",
+      "format": "text",
+      "value": "support@vitawise.sa"
+    },
+    {
+      "type": "string",
+      "id": "store_support_phone",
+      "label": "رقم الدعم",
+      "format": "text",
+      "value": "+966500000000"
+    },
+    {
+      "type": "boolean",
+      "id": "enable_rtl_optimizations",
+      "label": "تفعيل تحسينات RTL",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "enable_ltr_support",
+      "label": "تفعيل دعم LTR",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "enable_sticky_header",
+      "label": "تثبيت الهيدر أثناء التمرير",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "enable_page_animations",
+      "label": "تفعيل حركات الواجهة",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "static",
+      "id": "section-general-line",
+      "format": "line"
+    },
+    {
+      "type": "static",
+      "id": "section-branding-title",
+      "format": "title",
+      "value": "الهوية والألوان",
+      "variant": "h6"
+    },
+    {
+      "type": "string",
+      "id": "brand_primary_color",
+      "label": "اللون الأساسي",
+      "format": "text",
+      "value": "#1E9ED8"
+    },
+    {
+      "type": "string",
+      "id": "brand_accent_color",
+      "label": "لون الأزرار والتنبيهات",
+      "format": "text",
+      "value": "#C93A2E"
+    },
+    {
+      "type": "string",
+      "id": "brand_dark_color",
+      "label": "لون الهيدر/الفوتر",
+      "format": "text",
+      "value": "#01012D"
+    },
+    {
+      "type": "string",
+      "id": "brand_soft_bg",
+      "label": "لون الخلفية الناعم",
+      "format": "text",
+      "value": "#DFF2F3"
+    },
+    {
+      "type": "string",
+      "id": "font_family_ar",
+      "label": "خط العربية",
+      "format": "text",
+      "value": "Cairo"
+    },
+    {
+      "type": "string",
+      "id": "font_family_en",
+      "label": "خط الإنجليزية",
+      "format": "text",
+      "value": "Inter"
+    },
+    {
+      "type": "string",
+      "id": "border_radius",
+      "label": "استدارة الحواف",
+      "format": "text",
+      "value": "12px"
+    },
+    {
+      "type": "boolean",
+      "id": "enable_glass_effect",
+      "label": "تفعيل تأثير الزجاج",
+      "format": "switch",
+      "value": false,
+      "selected": false
+    },
+    {
+      "type": "static",
+      "id": "section-branding-line",
+      "format": "line"
+    },
+    {
+      "type": "static",
+      "id": "section-topbar-title",
+      "format": "title",
+      "value": "الشريط العلوي (الطقس/الصلاة/الأخبار)",
+      "variant": "h6"
+    },
+    {
+      "type": "boolean",
+      "id": "show_weather_bar",
+      "label": "إظهار شريط التاريخ والطقس",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "show_hijri_date",
+      "label": "إظهار التاريخ الهجري",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "show_prayer_times",
+      "label": "إظهار وقت الصلاة القادم",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "string",
+      "id": "default_city_name",
+      "label": "المدينة الافتراضية",
+      "format": "text",
+      "value": "Riyadh"
+    },
+    {
+      "type": "string",
+      "id": "default_latitude",
+      "label": "خط العرض الافتراضي",
+      "format": "text",
+      "value": "24.7136"
+    },
+    {
+      "type": "string",
+      "id": "default_longitude",
+      "label": "خط الطول الافتراضي",
+      "format": "text",
+      "value": "46.6753"
+    },
+    {
+      "type": "boolean",
+      "id": "show_news_banner",
+      "label": "إظهار شريط الأخبار المتحرك",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "string",
+      "id": "news_item_1",
+      "label": "النص الإخباري 1",
+      "format": "text",
+      "value": "عروض نهاية الأسبوع حتى 30٪"
+    },
+    {
+      "type": "string",
+      "id": "news_item_2",
+      "label": "النص الإخباري 2",
+      "format": "text",
+      "value": "شحن سريع لجميع مناطق المملكة"
+    },
+    {
+      "type": "string",
+      "id": "news_item_3",
+      "label": "النص الإخباري 3",
+      "format": "text",
+      "value": "منتجات صيدلانية موثوقة"
+    },
+    {
+      "type": "string",
+      "id": "news_speed_seconds",
+      "label": "سرعة شريط الأخبار (ثانية)",
+      "format": "text",
+      "value": "20"
+    },
+    {
+      "type": "static",
+      "id": "section-topbar-line",
+      "format": "line"
+    },
+    {
+      "type": "static",
+      "id": "section-header-title",
+      "format": "title",
+      "value": "إعدادات الهيدر والتنقل",
+      "variant": "h6"
+    },
     {
       "type": "boolean",
       "id": "topnav_is_dark",
       "label": "شريط علوي داكن",
       "format": "switch",
-      "required": false,
       "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "show_category_nav",
+      "label": "إظهار شريط التصنيفات",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "show_search_in_header",
+      "label": "إظهار البحث في الهيدر",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "show_language_switcher",
+      "label": "إظهار محول اللغة",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "show_wishlist_icon",
+      "label": "إظهار أيقونة المفضلة",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "show_cart_icon",
+      "label": "إظهار أيقونة السلة",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "show_login_button",
+      "label": "إظهار زر تسجيل الدخول",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "string",
+      "id": "header_layout_style",
+      "label": "نمط الهيدر",
+      "format": "text",
+      "value": "default"
+    },
+    {
+      "type": "string",
+      "id": "header_font_size",
+      "label": "حجم خط الهيدر",
+      "format": "text",
+      "value": "14px"
+    },
+    {
+      "type": "string",
+      "id": "header_height",
+      "label": "ارتفاع الهيدر",
+      "format": "text",
+      "value": "72px"
+    },
+    {
+      "type": "static",
+      "id": "section-header-line",
+      "format": "line"
+    },
+    {
+      "type": "static",
+      "id": "section-home-title",
+      "format": "title",
+      "value": "إعدادات الصفحة الرئيسية",
+      "variant": "h6"
+    },
+    {
+      "type": "string",
+      "id": "home_sections_order",
+      "label": "ترتيب أقسام الصفحة الرئيسية",
+      "format": "text",
+      "value": "hero,categories,featured,new_arrivals,best_sellers,recently_viewed,blog"
+    },
+    {
+      "type": "boolean",
+      "id": "show_hero_section",
+      "label": "إظهار البانر الرئيسي",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "string",
+      "id": "hero_badge_text",
+      "label": "النص القصير أعلى العنوان",
+      "format": "text",
+      "value": "شريكك الصحي"
+    },
+    {
+      "type": "string",
+      "id": "hero_title_text",
+      "label": "عنوان البانر الرئيسي",
+      "format": "text",
+      "value": "احتياجاتك الصحية بجودة موثوقة"
+    },
+    {
+      "type": "string",
+      "id": "hero_subtitle_text",
+      "label": "وصف البانر الرئيسي",
+      "format": "textarea",
+      "value": "اكتشف منتجات الرعاية الصحية والمكملات المختارة بعناية."
+    },
+    {
+      "type": "string",
+      "id": "hero_cta_text",
+      "label": "نص زر البانر",
+      "format": "text",
+      "value": "تسوق الآن"
+    },
+    {
+      "type": "string",
+      "id": "hero_cta_link",
+      "label": "رابط زر البانر",
+      "format": "text",
+      "value": "/products"
+    },
+    {
+      "type": "string",
+      "id": "hero_image_url",
+      "label": "رابط صورة البانر",
+      "format": "text",
+      "value": ""
+    },
+    {
+      "type": "string",
+      "id": "hero_auto_slide_seconds",
+      "label": "مدة التنقل التلقائي (ثانية)",
+      "format": "text",
+      "value": "5"
+    },
+    {
+      "type": "boolean",
+      "id": "show_categories_section",
+      "label": "إظهار قسم التصنيفات",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "show_featured_section",
+      "label": "إظهار قسم المنتجات المميزة",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "string",
+      "id": "featured_count",
+      "label": "عدد المنتجات المميزة",
+      "format": "text",
+      "value": "8"
+    },
+    {
+      "type": "boolean",
+      "id": "show_new_arrivals_section",
+      "label": "إظهار قسم وصل حديثاً",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "string",
+      "id": "new_arrivals_count",
+      "label": "عدد منتجات وصل حديثاً",
+      "format": "text",
+      "value": "8"
+    },
+    {
+      "type": "boolean",
+      "id": "show_best_sellers_section",
+      "label": "إظهار قسم الأكثر مبيعاً",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "string",
+      "id": "best_sellers_count",
+      "label": "عدد المنتجات الأكثر مبيعاً",
+      "format": "text",
+      "value": "8"
+    },
+    {
+      "type": "boolean",
+      "id": "show_recently_viewed_section",
+      "label": "إظهار قسم شوهد مؤخراً",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "show_blog_section",
+      "label": "إظهار قسم المدونة",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "string",
+      "id": "blog_posts_count",
+      "label": "عدد مقالات المدونة",
+      "format": "text",
+      "value": "3"
+    },
+    {
+      "type": "static",
+      "id": "section-home-line",
+      "format": "line"
+    },
+    {
+      "type": "static",
+      "id": "section-products-title",
+      "format": "title",
+      "value": "إعدادات المنتجات",
+      "variant": "h6"
+    },
+    {
+      "type": "string",
+      "id": "products_per_row_desktop",
+      "label": "عدد بطاقات المنتج في السطر (ديسكتوب)",
+      "format": "text",
+      "value": "4"
+    },
+    {
+      "type": "string",
+      "id": "products_per_row_tablet",
+      "label": "عدد بطاقات المنتج في السطر (تابلت)",
+      "format": "text",
+      "value": "2"
+    },
+    {
+      "type": "string",
+      "id": "products_per_row_mobile",
+      "label": "عدد بطاقات المنتج في السطر (جوال)",
+      "format": "text",
+      "value": "1"
+    },
+    {
+      "type": "boolean",
+      "id": "show_product_rating",
+      "label": "إظهار تقييم المنتج",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "show_product_category",
+      "label": "إظهار تصنيف المنتج",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "show_product_discount_badge",
+      "label": "إظهار شارة الخصم",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "show_product_stock_status",
+      "label": "إظهار حالة التوفر",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "enable_quick_add_to_cart",
+      "label": "تفعيل الإضافة السريعة للسلة",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "enable_wishlist_button",
+      "label": "تفعيل زر المفضلة",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "enable_compare_button",
+      "label": "تفعيل زر المقارنة",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "string",
+      "id": "max_compare_items",
+      "label": "الحد الأقصى للمقارنة",
+      "format": "text",
+      "value": "4"
+    },
+    {
+      "type": "static",
+      "id": "section-products-line",
+      "format": "line"
+    },
+    {
+      "type": "static",
+      "id": "section-cart-checkout-title",
+      "format": "title",
+      "value": "السلة وإتمام الطلب",
+      "variant": "h6"
+    },
+    {
+      "type": "boolean",
+      "id": "guest_checkout_enabled",
+      "label": "تفعيل الدفع كزائر",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "string",
+      "id": "default_currency",
+      "label": "العملة الافتراضية",
+      "format": "text",
+      "value": "SAR"
+    },
+    {
+      "type": "string",
+      "id": "vat_rate",
+      "label": "نسبة ضريبة القيمة المضافة",
+      "format": "text",
+      "value": "0.15"
+    },
+    {
+      "type": "boolean",
+      "id": "show_vat_breakdown",
+      "label": "إظهار تفاصيل الضريبة",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "string",
+      "id": "default_shipping_cost",
+      "label": "تكلفة الشحن الافتراضية",
+      "format": "text",
+      "value": "25"
+    },
+    {
+      "type": "string",
+      "id": "free_shipping_threshold",
+      "label": "حد الشحن المجاني",
+      "format": "text",
+      "value": "300"
+    },
+    {
+      "type": "boolean",
+      "id": "show_discount_field",
+      "label": "إظهار حقل كود الخصم",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "show_order_notes",
+      "label": "إظهار حقل ملاحظات الطلب",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "enable_cod",
+      "label": "تفعيل الدفع عند الاستلام",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "enable_credit_card",
+      "label": "تفعيل البطاقة الائتمانية",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "enable_stc_pay",
+      "label": "تفعيل STC Pay",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "enable_bank_transfer",
+      "label": "تفعيل التحويل البنكي",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "static",
+      "id": "section-cart-checkout-line",
+      "format": "line"
+    },
+    {
+      "type": "static",
+      "id": "section-auth-title",
+      "format": "title",
+      "value": "الحساب وتسجيل الدخول",
+      "variant": "h6"
+    },
+    {
+      "type": "boolean",
+      "id": "show_social_login",
+      "label": "إظهار تسجيل الدخول الاجتماعي",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "enable_google_login",
+      "label": "تفعيل Google Login",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "enable_apple_login",
+      "label": "تفعيل Apple Login",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "require_phone_on_checkout",
+      "label": "إلزام رقم الجوال عند الطلب",
+      "format": "switch",
+      "value": false,
       "selected": false
+    },
+    {
+      "type": "static",
+      "id": "section-auth-line",
+      "format": "line"
+    },
+    {
+      "type": "static",
+      "id": "section-about-title",
+      "format": "title",
+      "value": "صفحة من نحن",
+      "variant": "h6"
+    },
+    {
+      "type": "string",
+      "id": "about_title",
+      "label": "عنوان صفحة من نحن",
+      "format": "text",
+      "value": "About VitaWise"
+    },
+    {
+      "type": "string",
+      "id": "about_description",
+      "label": "وصف صفحة من نحن",
+      "format": "textarea",
+      "value": "VitaWise is a trusted online pharmacy experience focused on quality products and customer care."
+    },
+    {
+      "type": "string",
+      "id": "about_feature_1_title",
+      "label": "عنوان الميزة 1",
+      "format": "text",
+      "value": "العناية أولاً"
+    },
+    {
+      "type": "string",
+      "id": "about_feature_1_text",
+      "label": "وصف الميزة 1",
+      "format": "textarea",
+      "value": "صحتك هي محور كل منتج وتوصية داخل المتجر."
+    },
+    {
+      "type": "string",
+      "id": "about_feature_2_title",
+      "label": "عنوان الميزة 2",
+      "format": "text",
+      "value": "جودة موثقة"
+    },
+    {
+      "type": "string",
+      "id": "about_feature_2_text",
+      "label": "وصف الميزة 2",
+      "format": "textarea",
+      "value": "نختار المنتجات من مصادر موثوقة مع متابعة الجودة باستمرار."
+    },
+    {
+      "type": "string",
+      "id": "about_feature_3_title",
+      "label": "عنوان الميزة 3",
+      "format": "text",
+      "value": "توصيل سريع"
+    },
+    {
+      "type": "string",
+      "id": "about_feature_3_text",
+      "label": "وصف الميزة 3",
+      "format": "textarea",
+      "value": "شحن إلى جميع مناطق المملكة مع تتبع واضح للطلبات."
+    },
+    {
+      "type": "string",
+      "id": "about_feature_4_title",
+      "label": "عنوان الميزة 4",
+      "format": "text",
+      "value": "متاح دائماً"
+    },
+    {
+      "type": "string",
+      "id": "about_feature_4_text",
+      "label": "وصف الميزة 4",
+      "format": "textarea",
+      "value": "تجربة صيدلية إلكترونية يعتمد عليها وقت الحاجة."
+    },
+    {
+      "type": "static",
+      "id": "section-about-line",
+      "format": "line"
+    },
+    {
+      "type": "static",
+      "id": "section-blog-title",
+      "format": "title",
+      "value": "المدونة والمحتوى",
+      "variant": "h6"
+    },
+    {
+      "type": "boolean",
+      "id": "enable_blog_page",
+      "label": "تفعيل صفحة المدونة",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "string",
+      "id": "blog_page_title",
+      "label": "عنوان صفحة المدونة",
+      "format": "text",
+      "value": "من المدونة"
+    },
+    {
+      "type": "string",
+      "id": "blog_page_description",
+      "label": "وصف صفحة المدونة",
+      "format": "textarea",
+      "value": "آخر التحديثات والنصائح الصحية ومحتوى الصيدلية."
+    },
+    {
+      "type": "boolean",
+      "id": "enable_blog_comments",
+      "label": "تفعيل التعليقات",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "enable_blog_share_buttons",
+      "label": "تفعيل أزرار مشاركة المقالات",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "static",
+      "id": "section-blog-line",
+      "format": "line"
+    },
+    {
+      "type": "static",
+      "id": "section-footer-title",
+      "format": "title",
+      "value": "الفوتر والنشرة البريدية",
+      "variant": "h6"
+    },
+    {
+      "type": "boolean",
+      "id": "show_newsletter",
+      "label": "إظهار قسم النشرة البريدية",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "string",
+      "id": "footer_about_text",
+      "label": "نص التعريف في الفوتر",
+      "format": "textarea",
+      "value": "فيتاوايز توفر منتجات صيدلانية موثوقة بأسعار واضحة وتوصيل سريع."
+    },
+    {
+      "type": "string",
+      "id": "footer_newsletter_title",
+      "label": "عنوان النشرة البريدية",
+      "format": "text",
+      "value": "النشرة البريدية"
+    },
+    {
+      "type": "string",
+      "id": "footer_newsletter_description",
+      "label": "وصف النشرة البريدية",
+      "format": "textarea",
+      "value": "اشترك ليصلك جديد العروض والمنتجات."
+    },
+    {
+      "type": "string",
+      "id": "footer_copyright_text",
+      "label": "نص حقوق النشر",
+      "format": "text",
+      "value": "جميع الحقوق محفوظة."
+    },
+    {
+      "type": "string",
+      "id": "footer_facebook_url",
+      "label": "رابط Facebook",
+      "format": "text",
+      "value": ""
+    },
+    {
+      "type": "string",
+      "id": "footer_twitter_url",
+      "label": "رابط Twitter/X",
+      "format": "text",
+      "value": ""
+    },
+    {
+      "type": "string",
+      "id": "footer_instagram_url",
+      "label": "رابط Instagram",
+      "format": "text",
+      "value": ""
+    },
+    {
+      "type": "string",
+      "id": "footer_youtube_url",
+      "label": "رابط YouTube",
+      "format": "text",
+      "value": ""
+    },
+    {
+      "type": "static",
+      "id": "section-footer-line",
+      "format": "line"
+    },
+    {
+      "type": "static",
+      "id": "section-advanced-title",
+      "format": "title",
+      "value": "خيارات متقدمة",
+      "variant": "h6"
+    },
+    {
+      "type": "boolean",
+      "id": "maintenance_mode_banner",
+      "label": "إظهار تنبيه وضع الصيانة",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "enable_seo_meta_tags",
+      "label": "تفعيل وسوم SEO",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "enable_json_ld",
+      "label": "تفعيل JSON-LD",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "enable_lazy_loading_images",
+      "label": "تفعيل التحميل الكسول للصور",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "enable_live_chat_widget",
+      "label": "تفعيل ويدجت المحادثة",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "string",
+      "id": "whatsapp_number",
+      "label": "رقم واتساب للدعم",
+      "format": "text",
+      "value": ""
+    },
+    {
+      "type": "boolean",
+      "id": "enable_barcode_scanner",
+      "label": "تفعيل قارئ الباركود",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "boolean",
+      "id": "enable_theme_docs_page",
+      "label": "تفعيل صفحة توثيق الثيم",
+      "format": "switch",
+      "value": true,
+      "selected": true
+    },
+    {
+      "type": "string",
+      "id": "custom_css",
+      "label": "CSS مخصص",
+      "format": "textarea",
+      "value": ""
+    },
+    {
+      "type": "string",
+      "id": "custom_js",
+      "label": "JavaScript مخصص",
+      "format": "textarea",
+      "value": ""
     }
   ],
   "components": []
