@@ -5,7 +5,21 @@
   },
   "repository": "https://github.com/vitawise/vita-wise-theme",
   "author_email": "support@vitawise.sa",
-  "features": [],
-  "settings": [],
+  "features": [
+    "filters",
+    "component-featured-products",
+    "component-products-slider"
+  ],
+  "settings": [
+    {
+      "type": "boolean",
+      "id": "topnav_is_dark",
+      "label": "شريط علوي داكن",
+      "format": "switch",
+      "required": false,
+      "value": true,
+      "selected": false
+    }
+  ],
   "components": []
 }
